@@ -12,8 +12,6 @@ Please report vulnerabilities **privately**. Do not open a public Issue, Discuss
 
 **Private reporting channel:** GitHub private vulnerability reporting. Open the repository's [Security tab](https://github.com/vestainsight-dotcom/vesta-scanner-web/security) and choose **Report a vulnerability**.
 
-_PENDING — the maintainer enables private vulnerability reporting when the repository is made public. If the **Report a vulnerability** button is not shown yet, do not post any details publicly; instead open an Issue that only asks for a private contact, without describing the problem._
-
 Please include:
 
 - A description of the issue and its impact
@@ -65,8 +63,6 @@ Every pull request is reviewed by a maintainer and must pass `npm run check`, wh
 請以**私下方式**回報漏洞，不要在公開的 Issue、Discussion 或 PR 中描述尚未修復的漏洞。
 
 **私下回報管道：**GitHub private vulnerability reporting。請開啟本儲存庫的 [Security 分頁](https://github.com/vestainsight-dotcom/vesta-scanner-web/security)，選擇「**Report a vulnerability**」。
-
-_待啟用（PENDING）：維護者會在儲存庫公開時啟用 private vulnerability reporting。若尚未看到「Report a vulnerability」按鈕，請勿公開任何細節，只需開一個 Issue 請求私下聯絡方式，不要描述問題本身。_
 
 回報時請附上：問題描述與影響、重現步驟（最好以本機建置 `npm run build && npm start` 重現）、受影響的檔案與 commit（若知道），以及修正建議（若有）。我們會盡力確認收到回報，並在評估與修復期間告知進度。本專案規模小，不提供漏洞賞金，也不承諾固定回應時間。
 

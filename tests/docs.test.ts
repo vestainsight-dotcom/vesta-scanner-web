@@ -118,9 +118,13 @@ test("docs describe the fictional mock figures, not production-like ones", () =>
   for (const f of markdownFiles()) assert.doesNotMatch(read(f), /\b522\b|3 of 4 market/, f);
 });
 
-test("pending items are marked, not invented", () => {
-  assert.match(read("SECURITY.md"), /PENDING/);
-  assert.doesNotMatch(read("CODE_OF_CONDUCT.md"), /PENDING|\[INSERT CONTACT METHOD\]/);
+test("no pending placeholders remain; security reports go through private vulnerability reporting", () => {
+  for (const f of ["SECURITY.md", "CODE_OF_CONDUCT.md"]) {
+    assert.doesNotMatch(read(f), /PENDING|待啟用|\[INSERT CONTACT METHOD\]/, f);
+  }
+  const security = read("SECURITY.md");
+  assert.equal(security.match(/GitHub private vulnerability reporting/g)?.length, 2, "channel stated in EN and ZH");
+  assert.equal(security.match(/\*\*Report a vulnerability\*\*/g)?.length, 2);
 });
 
 test("the Code of Conduct contact is stated in both languages and nowhere else", () => {
