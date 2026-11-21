@@ -1,0 +1,88 @@
+name: Bug report / 錯誤回報
+description: Something in the demo does not work as expected. / 展示中的功能不如預期。
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is a demo with **simulated data only**. Do not report security vulnerabilities here — see SECURITY.md. Never paste secrets, tokens or private URLs.
+        本儲存庫只使用**模擬資料**。安全漏洞請勿在此回報（見 SECURITY.md），也請勿貼上任何 secret、token 或私有網址。
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem description / 問題描述
+      description: What went wrong? / 發生了什麼問題？
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 重現步驟
+      placeholder: |
+        1. npm run dev
+        2. Open http://localhost:3210/demo?scenario=stale&lang=en
+        3. Click ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior / 預期行為
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior / 實際行為
+    validations:
+      required: true
+  - type: dropdown
+    id: scenario
+    attributes:
+      label: Mock scenario / 模擬情境
+      options:
+        - normal
+        - high_vr14
+        - stale
+        - empty
+        - pending
+        - low_liquidity
+        - partial
+        - invalid
+        - not related / 無關
+    validations:
+      required: true
+  - type: dropdown
+    id: build
+    attributes:
+      label: Build / 建置方式
+      options:
+        - npm run dev
+        - npm run build && npm start
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device / 瀏覽器與裝置
+      placeholder: e.g. Safari 18 on iPhone 15, Chrome 131 on macOS
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: UI language / 介面語言
+      options:
+        - zh-Hant
+        - en
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots / 截圖
+      description: Optional. Make sure nothing private is visible. / 選填，請確認畫面中沒有私人資訊。
+  - type: textarea
+    id: tests
+    attributes:
+      label: Test results / 測試結果
+      description: Output of `npm run check` if relevant. / 如相關，請附上 `npm run check` 的輸出。
+      render: shell

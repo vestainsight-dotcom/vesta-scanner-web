@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>VESTA Scanner Demo — 離線 / Offline</title>
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+         background: #f4f4f5; color: #26262b; font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, sans-serif; }
+  main { max-width: 26rem; padding: 0 16px; }
+  img { width: 56px; height: 56px; border-radius: 12px; }
+  h1 { font-size: 1.4rem; font-weight: 500; margin: 16px 0 8px; }
+  p { margin: 0 0 12px; color: rgba(38,38,43,.65); font-size: .95rem; }
+  button { margin-top: 8px; font: inherit; font-size: .9rem; padding: 6px 16px; border-radius: 999px;
+           border: 1px solid #4f5fd6; background: rgba(79,95,214,.08); color: #26262b; cursor: pointer; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/demo/icons/icon-192.png" alt="">
+  <h1>目前離線 · You are offline</h1>
+  <p>無法載入 VESTA Scanner 展示頁。本頁不保存任何資料。</p>
+  <p lang="en">The VESTA Scanner demo cannot be loaded. This page stores no data.</p>
+  <p>恢復網路後會自動重新載入。 / Reloads automatically when back online.</p>
+  <button type="button" onclick="location.reload()">重新載入 / Reload</button>
+</main>
+<script>addEventListener("online", function () { location.reload(); });</script>
+</body>
+</html>

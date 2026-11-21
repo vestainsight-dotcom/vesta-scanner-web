@@ -1,0 +1,47 @@
+name: Feature request / 功能建議
+description: Propose an improvement to the demo. For larger ideas, describe the scope here and wait for maintainer agreement before starting work. / 建議改進；較大的想法請先在此說明範圍，待維護者確認後再開始開發。
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Features that add live market data, production API access, trading execution or credentials are out of scope (see CONTRIBUTING.md).
+        加入即時行情、正式 API、交易執行或憑證的功能不在範圍內（見 CONTRIBUTING.md）。
+  - type: input
+    id: related
+    attributes:
+      label: Related Issues / 相關 Issue
+      description: Links to related Issues, if any. / 若有相關 Issue，請附連結。
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve / 要解決的問題
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement / 建議的改進
+    validations:
+      required: true
+  - type: textarea
+    id: benefit
+    attributes:
+      label: User benefit / 使用者效益
+      description: Who benefits and how? / 誰會受益、如何受益？
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative approaches / 其他做法
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria / 驗收條件
+      placeholder: |
+        - [ ] Works in both zh-Hant and en
+        - [ ] Covered by tests
+        - [ ] npm run check passes
+    validations:
+      required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability / 回報安全漏洞
+    url: https://github.com/vestainsight-dotcom/vesta-scanner-web/security/policy
+    about: Please report vulnerabilities privately as described in the security policy, never in a public issue. / 請依安全政策私下回報，切勿公開開 Issue。

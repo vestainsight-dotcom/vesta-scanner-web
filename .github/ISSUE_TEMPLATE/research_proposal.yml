@@ -1,0 +1,55 @@
+name: Research proposal / 研究提案
+description: Propose a research question for a future feature. / 為未來功能提出研究問題。
+labels: ["research", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Research proposals are for discussing questions and methods. Acceptance does not mean a feature will be built or shipped, and nothing here is investment advice. Do not include proprietary data you are not allowed to share.
+        研究提案用於討論問題與方法；被接受不代表一定會實作或上線，內容也不構成投資建議。請勿附上你無權分享的專有資料。
+  - type: textarea
+    id: question
+    attributes:
+      label: Research question / 研究問題
+    validations:
+      required: true
+  - type: textarea
+    id: hypothesis
+    attributes:
+      label: Hypothesis / 假設
+    validations:
+      required: true
+  - type: textarea
+    id: method
+    attributes:
+      label: Proposed methodology / 研究方法
+      description: Metrics, windows, sample period, statistical tests. / 指標、視窗、樣本期間、統計檢定。
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Required data / 所需資料
+      description: Data sources and whether they are publicly available. / 資料來源及是否公開可得。
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation method / 驗證方式
+      description: How would we know the result is robust (out-of-sample, alternative windows, ...)? / 如何確認結果穩健（樣本外、不同視窗…）？
+    validations:
+      required: true
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Limitations / 限制
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Expected output / 預期產出
+      description: e.g. a written note, a mock-data UI prototype, a proposed public schema field. / 例如研究筆記、模擬資料 UI 原型、公開 schema 欄位提案。
+    validations:
+      required: true
